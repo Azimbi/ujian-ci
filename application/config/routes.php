@@ -52,3 +52,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'start/migration';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['start/fetch-api'] = 'start/fetch_api';
+$route['start/consume-api'] = 'start/consume_api';
+$route['start/show-result'] = 'start/show_result';
