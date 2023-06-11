@@ -12,7 +12,7 @@
         <?php endif; ?>
         </div>
         <div class="col-12 pb-2 pe-0 d-flex justify-content-between text-center">
-            <a href="<?= site_url('start/show-result'); ?>" class="btn btn-primary"><i class="bi bi-cloud-fog2 fs-5"></i> Fetch API</a>
+            <a href="<?= site_url('start/show-result'); ?>" class="btn btn-primary"><i class="bi bi-cloud-fog2 fs-5"></i> Lihat API</a>
             <a href="<?= site_url('produk/create'); ?>" class="btn btn-success"><i class="bi bi-plus-circle fs-5"></i> Tambah Produk</a>
         </div>
         <table class="table table-responsive table-bordered">
