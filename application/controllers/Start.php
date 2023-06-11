@@ -17,7 +17,7 @@ class Start extends CI_Controller {
             if ($this->migration->current() === FALSE) {
                 show_error($this->migration->error_string());
             } else {
-                echo 'Migration Successfull';
+                echo 'Migration Successfull, <a href="'.site_url('start/fetch-api').'">lets Fetch API</a>';
             }
             
         } else {
