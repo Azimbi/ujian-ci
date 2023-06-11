@@ -14,6 +14,9 @@
             </span>
             </p>
         </div>
+        <div class="col-md-6 text-md-end text-center pb-2">
+            <a href="<?= site_url('produk'); ?>" class="btn btn-primary"><i class="bi bi-bag-check fs-5"></i> Lihat Produk</a>
+        </div>
         <table class="table table-responsive table-bordered">
             <thead>
                 <tr class="text-center">
