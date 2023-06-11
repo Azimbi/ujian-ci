@@ -135,8 +135,8 @@ class Start extends CI_Controller {
         
         $jumlahBisaDijual = $this->produk_model->countAllProdukBisaDijual(); 
         if($jumlahBisaDijual < 5) {
-            return show_error('Data anda kurang dari 5 buah, Silahkan melakukan fetch API Lagi '. 
-                '<a href="'.site_url('start/fetch-api').'">disini</a>', 500, '500 Please Fetch API Again');
+            return show_error('Silahkan melakukan fetch API '. 
+                '<a href="'.site_url('start/fetch-api').'">disini</a>', 500, 'Please Fetch The API');
         }
 
         if(empty($this->session->userdata('response_api')) && empty($this->session->userdata('username')) ) {
