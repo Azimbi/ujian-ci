@@ -10,7 +10,7 @@ class Start extends CI_Controller {
 
     public function migration()
     {
-        if($this->produk_model->checkProdukTableExist()  === FALSE) {
+        if($this->produk_model->checkProdukTableExist() === FALSE) {
             
             $this->load->library('migration');
 
@@ -26,7 +26,7 @@ class Start extends CI_Controller {
     }
 
     public function fetch_api() {
-        if($this->produk_model->checkProdukTableExist()  === FALSE) {
+        if($this->produk_model->checkProdukTableExist() === FALSE) {
             echo 'Tabel <strong>Produk</strong> belum ada di database anda, silahkan lakukan migration dulu '. 
                 '<a href="'.site_url('start/migration').'">disini</a> atau export file .sql nya';
         } else {
@@ -36,6 +36,12 @@ class Start extends CI_Controller {
 
     public function consume_api()
     {
+        // Show error 404 when table not exist
+        if($this->produk_model->checkProdukTableExist() === FALSE) {
+            return show_error('Tabel <strong>Produk</strong> belum ada di database anda, silahkan lakukan migration dulu '. 
+                '<a href="'.site_url('start/migration').'">disini</a> atau export file .sql nya', 404, '404 Table Not Found');
+        }
+
         $apiUrl = 'https://recruitment.fastprint.co.id/tes/api_tes_programmer';
         // Set timezone to WIB;
         date_default_timezone_set('Asia/Jakarta');
@@ -121,6 +127,18 @@ class Start extends CI_Controller {
     }
 
     public function show_result() {
+        // Show error 404 when table not exist
+        if($this->produk_model->checkProdukTableExist() === FALSE) {
+            return show_error('Tabel <strong>Produk</strong> belum ada di database anda, silahkan lakukan migration dulu '. 
+                '<a href="'.site_url('start/migration').'">disini</a> atau export file .sql nya', 404, '404 Table Not Found');
+        }
+        
+        $jumlahBisaDijual = $this->produk_model->countAllProdukBisaDijual(); 
+        if($jumlahBisaDijual < 5) {
+            return show_error('Data anda kurang dari 5 buah, Silahkan melakukan fetch API Lagi '. 
+                '<a href="'.site_url('start/fetch-api').'">disini</a>', 500, '500 Please Fetch API Again');
+        }
+
         if(empty($this->session->userdata('response_api')) && empty($this->session->userdata('username')) ) {
             echo 'session sudah habis silahkan fetch api lagi <a href="'.site_url('start/fetch-api').'">di sini</a>';
         } else {
