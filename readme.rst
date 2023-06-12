@@ -13,6 +13,12 @@ Penggunaan :
 -  Panggil API dengan url `localhost/ujian-ci/start/fetch-api <http://localhost/ujian-ci/start/fetch-api>`_
 
 ###################
+Video Hasil :
+###################
+
+-  `Hasil Pemrosesan API <https://youtu.be/f6OX10b3srg>`_
+
+###################
 What is CodeIgniter
 ###################
 
