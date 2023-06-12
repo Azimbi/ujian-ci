@@ -9,8 +9,8 @@ Penggunaan :
 ###################
 
 -  Buat database dengan Nama 'ujian_ci'
--  Lakukan migrasi terlebih dahulu dengan url `localhost/ujian-ci/start/migration <http://localhost/ujian-ci/start/migration`
--  Panggil API dengan url `localhost/ujian-ci/start/fetch-api <http://localhost/ujian-ci/start/fetch-api`
+-  Lakukan migrasi terlebih dahulu dengan url `localhost/ujian-ci/start/migration <http://localhost/ujian-ci/start/migration>`
+-  Panggil API dengan url `localhost/ujian-ci/start/fetch-api <http://localhost/ujian-ci/start/fetch-api>`
 
 ###################
 What is CodeIgniter
