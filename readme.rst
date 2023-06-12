@@ -1,4 +1,17 @@
 ###################
+Author :
+###################
+
+Muhammad Aziz Fikri
+
+###################
+Penggunaan :
+###################
+
+-  `Buat database dengan Nama 'ujian_ci'`_
+-  Lakukan migrasi terlebih dahulu dengan url `localhost/ujian-ci/start/migration <http://localhost/ujian-ci/start/migration`_
+
+###################
 What is CodeIgniter
 ###################
 
